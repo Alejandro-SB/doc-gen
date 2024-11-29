@@ -10,3 +10,11 @@ export const dniGenerator = (): string => {
 
 const generateNumber = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min) + min);
+
+const CountryCodes = ["ES"] as const;
+
+export type CountryCode = (typeof CountryCodes)[number];
+
+export const ibanGenerator = (countryCode: CountryCode) => {
+  throw new Error("Not implemented");
+};
